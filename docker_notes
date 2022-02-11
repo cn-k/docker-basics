@@ -1,0 +1,9 @@
+alpine : default docker image.içinde sadece işletim sistemi var.
+yeni bir custom image oluşturmak için Dockerfile isimli bir file oluşturmak gerekiyor.
+ÖRN:
+FROM alpine
+RUN apk add --update gcc
+RUN apk add --update redis
+CMD ["redis-server"]
+docker file'ı kullanarak image yaratmak için file'ın bulunduğu path'e gidip < docker build . > komutunu çalıştırmak gerekiyor.
+docker run -it <container-id> sh container ayağa kaldırır ve console'una bağlanır
